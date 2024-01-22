@@ -19,8 +19,8 @@ recognition.onresult = function(event) {//função evento!!!!!!!!!!!!!!!!
 
 document.getElementById("status").innerHTML = "A fala foi reconhecida: " + content; 
 
-to_number = Number(content);
-if(Number.isInteger(to_number)){
+toNumber = Number(content);
+if(Number.isInteger(toNumber)){
   document.getElementById("status").innerHTML = toNumber + "A maçã começou a ser desenhada";
   drawApple = "set";
 }
@@ -29,9 +29,9 @@ document.getElementById("status").innerHTML = toNumber + "O numero não foi reco
 }
 }
 function setup() {
- screen_width = window.innerWidth;
- screen_height = window.innerHeight;
-canvas = createCanvas(screenWidth ,screenHeight-150);
+ screenWidth = window.innerWidth;
+ screenHeight = window.innerHeight;
+canvas = createCanvas(screenWidth,screenHeight-150);
  canvas.position(0,150);
 }
 function draw() {
